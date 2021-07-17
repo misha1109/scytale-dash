@@ -20,7 +20,7 @@ Run `npm run build:ssr` to build the project. The build artifacts will be stored
 3. If ADMIN vs USER, the account data will be displayed differently.
 3. there is a partial implementation of authentication/login page (no tokens or session).
 
-    Valid user id required.
+    Valid user id required. (in data/users.json)
     
     Every password is valid.
     
