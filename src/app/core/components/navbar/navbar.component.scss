@@ -1,0 +1,21 @@
+.navbar-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  .app {
+    display: flex;
+    align-items: center;
+    .logo {
+      height: 50px;
+      width: auto;
+    }
+  }
+  .user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    * {
+      padding: 6px 4px;
+    }
+  }
+}

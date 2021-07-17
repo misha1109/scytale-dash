@@ -1,0 +1,14 @@
+<mat-toolbar class="navbar-wrapper">
+  <div class="app">
+    <span>Scytale</span>
+    <img class="logo" src="/assets/logo.jpg"/>
+  </div>
+  <div class="user" *ngIf="(user$ | async)">
+    <div class="set-mfa">
+      <button (click)="setMfaState(true)" mat-raised-button color="accent" [disabled]="!(isAdmin$ | async)">Enable MFA</button>
+      <button (click)="setMfaState(false)" mat-raised-button color="warn" [disabled]="!(isAdmin$ | async)">Disable MFA</button>
+    </div>
+    <span>{{ (user$ | async).name }}</span>
+    <span>{{ (user$ | async).role }}</span>
+  </div>
+</mat-toolbar>

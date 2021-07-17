@@ -1,0 +1,21 @@
+<div class="dashboard-wrapper">
+  <mat-tab-group>
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <span>Users</span>
+      </ng-template>
+      <div class="options-wrapper">
+        <button mat-raised-button color="accent" (click)="getData('users')">Get Users</button>
+        <button mat-raised-button color="accent" (click)="getData('admins')" [disabled]="!(isAdmin$ | async)">Get Admins</button>
+      </div>
+      <div class="content-wrapper">
+        <app-table [tableData]="currentData"></app-table>
+      </div>
+    </mat-tab>
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <span>Projects</span>
+      </ng-template>
+    </mat-tab>
+  </mat-tab-group>
+</div>

@@ -1,0 +1,59 @@
+{
+  "Inception": {
+    "id": 1,
+    "tree": {
+      "id": "a1e8f8d745cc87e3a9248358d9352bb7f9a0aeba",
+      "name": "html",
+      "type": "tree",
+      "path": "files/html",
+      "mode": "040000"
+    },
+    "approvals": {
+      "approvals_before_merge": 1,
+      "approvals_left": 0,
+      "reset_approvals_on_push": true,
+      "disable_overriding_approvers_per_merge_request": false,
+      "merge_requests_author_approval": true,
+      "merge_requests_disable_committers_approval": false,
+      "require_password_to_approve": true
+    }
+  },
+  "Dark Knight": {
+    "id": 2,
+    "tree": {
+      "id": "4535904260b1082e14f867f7a24fd8c21495bde3",
+      "name": "images",
+      "type": "tree",
+      "path": "files/images",
+      "mode": "040000"
+    },
+    "approvals": {
+      "approvals_before_merge": 2,
+      "approvals_left": 1,
+      "reset_approvals_on_push": true,
+      "disable_overriding_approvers_per_merge_request": false,
+      "merge_requests_author_approval": true,
+      "merge_requests_disable_committers_approval": false,
+      "require_password_to_approve": true
+    }
+  },
+  "The God Father": {
+    "id": 3,
+    "tree": {
+      "id": "4535904260b1082e14f867f7a24fd8c21495bde3",
+      "name": "images",
+      "type": "tree",
+      "path": "files/images",
+      "mode": "040000"
+    },
+    "approvals": {
+      "approvals_before_merge": 2,
+      "approvals_left": 0,
+      "reset_approvals_on_push": true,
+      "disable_overriding_approvers_per_merge_request": false,
+      "merge_requests_author_approval": true,
+      "merge_requests_disable_committers_approval": false,
+      "require_password_to_approve": true
+    }
+  }
+}
