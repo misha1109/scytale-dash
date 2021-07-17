@@ -52,6 +52,10 @@ export const requireAdmin = (req, res, next) => {
   next();
 };
 
+export const loginController = (req, res, next) => {
+  return {data: req.user};
+};
+
 export const logoutController = (req, res, next) => {
   res.clearCookie('auth');
   return true;

@@ -9,7 +9,6 @@ import {AuthService} from '../../core/services/auth.service';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-  currentData: any;
   isAdmin$: Observable<boolean>;
   constructor(
     private httpService: HttpService,
@@ -18,19 +17,5 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
     this.isAdmin$ = this.authService.getIsAdmin$();
-    this.getData('users');
-  }
-  getData(type): void {
-    console.log(type);
-    const endpoint = {
-      users: 'users',
-      admins: 'users/admins'
-    }[type];
-    this.httpService
-      .get(endpoint)
-      .subscribe(res => {
-        console.log(res)
-        this.currentData = res;
-      })
   }
 }

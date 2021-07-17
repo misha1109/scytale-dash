@@ -1,27 +1,28 @@
 # Scytale
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.5.
+## Install
 
-## Development server
+Run npm install
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Development server (SSR)
 
-## Code scaffolding
+Run `npm run dev:ssr` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Build (SSR)
 
-## Build
+Run `npm run build:ssr` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Notes
 
-## Running unit tests
+1. Data base is local (mockups), data folder in root.
+2. Client app is SSR and runs on same port as api endpoints (prefixed with api), ideally would be separate.
+3. If ADMIN vs USER, the account data will be displayed differently.
+3. there is a partial implementation of authentication/login page (no tokens or session).
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+    Valid user id required.
+    
+    Every password is valid.
+    
+    If MFA required then every 6 chars is valid.
+4. Haven't implemented any unit tests or automatation, just an approval check before merge. 
+    I am familiar with gitlab cicd pipelines, mocha, chai and other tools and flows for tests.

@@ -1,0 +1,8 @@
+
+<div class="options-wrapper">
+  <button mat-raised-button color="accent" (click)="getData('users')">Get Users</button>
+  <button mat-raised-button color="accent" (click)="getData('admins')" [disabled]="!(isAdmin$ | async)">Get Admins</button>
+</div>
+<div class="content-wrapper">
+  <app-table [tableData]="currentData"></app-table>
+</div>

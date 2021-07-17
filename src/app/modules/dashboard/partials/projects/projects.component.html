@@ -1,0 +1,30 @@
+<div class="projects-wrapper">
+  <mat-accordion *ngFor="let project of projects">
+    <mat-expansion-panel [expanded]="currentProject?.openedProjectId === project.id"
+    >
+      <mat-expansion-panel-header (click)="getProject(project.id)">
+        <mat-panel-title>
+          {{ project.name }}
+        </mat-panel-title>
+        <mat-panel-description>
+          id: {{ project.id }}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <mat-accordion>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header (click)="getProject(project.id)">
+            <mat-panel-title>
+                <button mat-raised-button color="primary" (click)="createMergeReq(project.id)">Create Merge Request</button>
+                <button mat-raised-button color="primary" [disabled]="!currentProject?.approvals || !currentProject?.isMrApproved" (click)="sendMergeRequest(project.id)">Merge</button>
+                <p *ngIf="currentProject?.approvals">Approvals Left  {{ currentProject.approvals.approvals_left }}</p>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+        </mat-expansion-panel>
+      </mat-accordion>
+      <div class="project-wrapper" *ngIf="currentProject?.tree">
+        <h3>Repository Tree:</h3>
+        <app-table [tableData]="currentProject.tree"></app-table>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
