@@ -2,7 +2,8 @@
 
 ## Install
 
-Run npm install
+Run npm install 
+(Possibly an installation on ng cli would be required separately)
 
 ## Development server (SSR)
 
